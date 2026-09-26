@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "export": "node src/commands/export.js",
+    "import": "node src/commands/import.js",
+    "rollback": "node src/commands/rollback.js",
+    "analyze": "node src/commands/analyze.js",
+    "ai": "node src/commands/ai.js",
+    "sync": "node src/commands/sync.js",
+    "status": "node src/commands/status.js",
+    "queue-enhance": "node src/commands/queue-enhance.js",
+    "worker": "node src/queue/worker.js",
+    "sync-all": "node src/commands/sync.js --all --verbose",
+    "scheduler": "node src/scheduler.js",
+    "sync-now": "node src/scheduler.js --now"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bullmq": "^5.78.0",
+    "chalk": "^5.6.2",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ioredis": "^5.11.1",
+    "mongoose": "^9.7.0",
+    "node-cron": "^4.2.1",
+    "openai": "^6.35.0",
+    "zod": "^4.4.3"
+  }
+}

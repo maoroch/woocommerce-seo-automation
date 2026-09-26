@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Ink & paper */
+  --ink: #15191e;
+  --ink-soft: #1d2229;
+  --paper: #f7f5f0;
+  --paper-dim: #efebe2;
+  --paper-border: #e0dbcd;
+
+  /* Accents */
+  --proof: #ff5c28;
+  /* proof-mark orange — actions, alerts */
+  --proof-soft: #ffe4d6;
+  --approved: #3fa66b;
+  /* approved green */
+  --approved-soft: #dff3e6;
+  --warn: #e0a526;
+  --warn-soft: #faf0d6;
+
+  /* Text */
+  --text-strong: #15191e;
+  --text-muted: #6b7280;
+  --text-faint: #9ca3af;
+  --text-on-ink: #f7f5f0;
+  --text-on-ink-muted: #9aa3ad;
+
+  --font-display: "Space Grotesk", "Helvetica Neue", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", "Menlo", "Consolas", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text-on-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Stamp / score badge */
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transform: rotate(-4deg);
+}
+
+/* Paper card */
+.paper {
+  background: var(--paper);
+  border: 1px solid var(--paper-border);
+  color: var(--text-strong);
+}
+
+/* Scrollbar tidy-up */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--paper-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--proof);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
